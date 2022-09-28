@@ -10,17 +10,21 @@
 <form>
     Tal 1:<input type="text" id="tal1">
     Tal 2:<input type="text" id="tal2">
-    Vælg mellem:
 
-    <select id="vælg imellem">
-        <option value="plus">+</option>
-        <option value="minus">-</option>
-        <option value="gange">*</option>
-        <option value="dividere">÷</option>
-        <input type="submit" value="Beregn">
+    <label for="operator">Vælge en operator:</label>
+
+    <select id="operator">
+        <option value="">-- vælge mellem --</option>
+
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
     </select>
-
+    <button type="button">Beregn</button>
 </form>
+
+<div id="result"></div>
 
 <script src="main.js"></script>
 </body>
