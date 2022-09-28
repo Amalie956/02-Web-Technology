@@ -2,12 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hej</title>
+    <title>En lille lommeregner</title>
 </head>
 <body>
-<input type="text" id="fname" name="fname">
-<button type="button">Se svar</button>
+<h1>En lille lommeregner</h1>
 
+<form>
+    Tal 1:<input type="text" id="tal1">
+    Tal 2:<input type="text" id="tal2">
+    Vælg mellem:
+
+    <select id="vælg imellem">
+        <option value="plus">+</option>
+        <option value="minus">-</option>
+        <option value="gange">*</option>
+        <option value="dividere">÷</option>
+        <input type="submit" value="Beregn">
+    </select>
+
+</form>
 
 <script src="main.js"></script>
 </body>
