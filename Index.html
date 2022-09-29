@@ -8,8 +8,8 @@
 <h1>En lille lommeregner</h1>
 
 <form>
-    Tal 1:<input type="text" id="tal1">
-    Tal 2:<input type="text" id="tal2">
+    Tal 1:<input type="text" id="tal1" placeholder="Skriv et tal" maxlength="10">
+    Tal 2:<input type="text" id="tal2" placeholder="Skriv et tal" maxlength="10">
 
     <label for="operator">Vælge en operator:</label>
 
@@ -21,8 +21,11 @@
         <option value="*">*</option>
         <option value="/">/</option>
     </select>
-    <button type="button">Beregn</button>
+    <!--unik id for elementet "input,  value angiver teksten på knappen-->
+    <input id="submit" type="submit" value="Beregn"/>
 </form>
+
+<p> </p>
 
 <div id="result"></div>
 
