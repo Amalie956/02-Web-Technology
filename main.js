@@ -9,38 +9,44 @@ button.addEventListener('click', function (event) {
     if (input1.toString() === "NaN") {
         let x = document.querySelector("#tal1").value;
         if (x.trim() === "") {
-            alert("Ups, du har skrevet forkert. Prøv igen.");
+            alert("Ups, du har skrevet forkert i boksen. Prøv igen.");
         } else {
-            alert("Ups, du har skrevet forkert. Prøv igen. Du skrev: " + x.trim() + " venligst skriv et tal");
+            alert("Ups, du har skrevet forkert. Du skrev: " + x.trim() + " venligst skriv et tal");
         }
         return;
     }
 
     if (input2.toString() === "NaN") {
-        alert("Ups, du har skrevet forkert. Prøv igen");
+        let y = document.querySelector("#tal2").value;
+        if (y.trim() === "") {
+            alert("Ups, du har skrevet forkert i boksen. Prøv igen");
+        } else {
+            alert("Ups, du har skrevet forkert. Du skrev: " + y.trim() + " venligst skriv et tal");
+        }
         return;
     }
+        if (op === "") {
+            alert("Du har glemt at indtaste en perator. Vælg venligst en af nedestående:");
+            return;
+        }
 
-    if (op === "") {
-        alert("Indtast en operator");
-        return;
+        let calculate;
+
+        if (op == "+") {
+            calculate = input1 + input2;
+        } else if (op == "-") {
+            calculate = input1 - input2;
+        } else if (op == "*") {
+            calculate = input1 * input2;
+        } else if (op == "/") {
+            calculate = input1 / input2;
+        }
+        const p = document.querySelector('p');
+        p.innerHTML = "Resultat er";
+
+        document.querySelector("#result").innerHTML = calculate;
     }
-
-    let calculate;
-
-    if (op == "+") {
-        calculate = input1 + input2;
-    } else if (op == "-") {
-        calculate = input1 - input2;
-    } else if (op == "*") {
-        calculate = input1 * input2;
-    } else if (op == "/") {
-        calculate = input1 / input2;
-    }
-    const p = document.querySelector('p');
-    p.innerHTML = "Resultat er";
-
-    document.querySelector("#result").innerHTML = calculate;
-});
+)
+    ;
 
 

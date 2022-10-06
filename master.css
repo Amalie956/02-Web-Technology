@@ -1,0 +1,14 @@
+/* Dette er baggrundsfarven på siden */
+body {
+    background-color: #376B92;
+}
+
+/* Centrere al teksten i midten */
+* {
+    text-align: center;
+}
+
+/*  */
+* {
+    box-sizing: border-box;
+}
