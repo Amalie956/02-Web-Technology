@@ -3,30 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title>En lille lommeregner</title>
-    <link rel="stylesheet" href="master.css">
+    <link href="master.css" rel="stylesheet">
 </head>
 <body>
 <h1>En lille lommeregner</h1>
 
+
 <form>
-    Tal 1:<input type="text" id="tal1" placeholder="Skriv et tal" maxlength="10">
-    Tal 2:<input type="text" id="tal2" placeholder="Skriv et tal" maxlength="10">
+    <div class="calculator">
+        <div>
+            <!--<label>Tal 1</label>-->
+            <input id="tal1" maxlength="10" placeholder="Skriv et tal" type="text">
+        </div>
 
-    <label for="operator">Vælge en operator:</label>
+        <div>
+            <!--<label>Tal 2</label>-->
+            <input id="tal2" maxlength="10" placeholder="Skriv et tal" type="text">
+        </div>
 
-    <select id="operator">
-        <option value="">-- vælge mellem --</option>
+        <div>
+            <!--<label for="operator">Operator:</label>-->
 
-        <option value="+">+</option>
-        <option value="-">-</option>
-        <option value="*">*</option>
-        <option value="/">/</option>
-    </select>
-    <!--unik id for elementet "input,  value angiver teksten på knappen-->
-    <input id="submit" type="submit" value="Beregn"/>
+            <select id="operator">
+                <option value="">-- vælge mellem --</option>
+
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+        </div>
+
+        <!--unik id for elementet "input,  value angiver teksten på knappen-->
+        <div>
+            <input id="submit" type="submit" value="Beregn"/>
+        </div>
+    </div>
 </form>
 
-<p> </p>
+
+<p></p>
 
 <div id="result"></div>
 

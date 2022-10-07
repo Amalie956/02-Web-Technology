@@ -1,6 +1,6 @@
 /* Dette er baggrundsfarven på siden */
 body {
-    background-color: #376B92;
+    background-color: #FFFFFF;
 }
 
 /* Centrere al teksten i midten */
@@ -8,7 +8,18 @@ body {
     text-align: center;
 }
 
-/*  */
-* {
-    box-sizing: border-box;
+/* Lommeregneren får en kant */
+.calculator {
+    background-color: #7CC27B;
+    position: center;
+    margin: auto;
+    width: 30%;
+    padding: 20px;
+    border-radius: 0 95px;
+    box-shadow: 3px 5px #326531;
+}
+
+/* Afstanden mellem tal 1, tal 2, vælg imellem og beregn */
+div {
+    margin-top: 5px;
 }
