@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>En lille lommeregner</title>
+    <title>Lommeregner</title>
     <link href="master.css" rel="stylesheet">
 </head>
 <body>
@@ -11,18 +11,14 @@
 <form>
     <div class="calculator">
         <div>
-            <!--<label>Tal 1</label>-->
-            <input id="tal1" maxlength="10" placeholder="Skriv et tal" type="text">
+            <input id="box1" maxlength="10" placeholder="Skriv et tal" type="text">
         </div>
 
         <div>
-            <!--<label>Tal 2</label>-->
-            <input id="tal2" maxlength="10" placeholder="Skriv et tal" type="text">
+            <input id="box2" maxlength="10" placeholder="Skriv et tal" type="text">
         </div>
 
         <div>
-            <!--<label for="operator">Operator:</label>-->
-
             <select id="operator">
                 <option value="">-- vælge mellem --</option>
 
@@ -33,22 +29,16 @@
             </select>
         </div>
 
-        <!--unik id for elementet "input,  value angiver teksten på knappen-->
         <div>
             <input id="submit" type="submit" value="Beregn"/>
         </div>
 
         <div>
-            <input id="finalResult" placeholder="Resultat" type="text" readonly>
+            <input id="finalResult" placeholder="Resultat" readonly type="text">
         </div>
     </div>
 </form>
-
-
-<p></p>
-
-<div id="result"></div>
-
 <script src="main.js"></script>
 </body>
 </html>
+

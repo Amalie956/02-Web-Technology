@@ -2,44 +2,44 @@ const button = document.querySelector("#submit");
 button.addEventListener('click', function (event) {
         event.preventDefault();
 
-        let input1 = parseFloat(document.querySelector("#tal1").value);
-        let input2 = parseFloat(document.querySelector("#tal2").value);
-        let op = document.querySelector("#operator").value;
+        let inputLeft = parseFloat(document.querySelector("#box1").value);
+        let inputRight = parseFloat(document.querySelector("#box2").value);
+        let operator = document.querySelector("#operator").value;
 
-        if (input1.toString() === "NaN") {
-            let x = document.querySelector("#tal1").value;
-            if (x.trim() === "") {
-                alert("Ups, du har skrevet forkert i boksen. Prøv igen.");
+        if (inputLeft.toString() === "NaN") {
+            let input1Value = document.querySelector("#box1").value;
+            if (input1Value.trim() === "") {
+                alert("Ups, indsæt et tal. Prøv igen.");
             } else {
-                alert("Ups, du har skrevet forkert. Du skrev: " + x.trim() + " venligst skriv et tal");
+                alert("Ups, du har skrevet forkert. Du skrev:  " + input1Value.trim() + ". Du skal rette det til et tal");
             }
             return;
         }
 
-        if (input2.toString() === "NaN") {
-            let y = document.querySelector("#tal2").value;
-            if (y.trim() === "") {
-                alert("Ups, du har skrevet forkert i boksen. Prøv igen");
+        if (inputRight.toString() === "NaN") {
+            let input2Value = document.querySelector("#box2").value;
+            if (input2Value.trim() === "") {
+                alert("Ups, indsæt et tal. Prøv igen");
             } else {
-                alert("Ups, du har skrevet forkert. Du skrev: " + y.trim() + " venligst skriv et tal");
+                alert("Ups, du har skrevet forkert. Du skrev: " + input2Value.trim() + ". Du skal rette det til et tal");
             }
             return;
         }
-        if (op === "") {
-            alert("Du har glemt at indtaste en operator. Vælg venligst en af nedestående:");
+        if (operator === "") {
+            alert("Du har glemt at indtaste en operator. Vælg venligst en af dem");
             return;
         }
 
         let calculate;
 
-        if (op == "+") {
-            calculate = input1 + input2;
-        } else if (op == "-") {
-            calculate = input1 - input2;
-        } else if (op == "*") {
-            calculate = input1 * input2;
-        } else if (op == "/") {
-            calculate = input1 / input2;
+        if (operator === "+") {
+            calculate = inputLeft + inputRight;
+        } else if (operator === "-") {
+            calculate = inputLeft - inputRight;
+        } else if (operator === "*") {
+            calculate = inputLeft * inputRight;
+        } else if (operator === "/") {
+            calculate = inputLeft / inputRight;
         }
 
         document.querySelector("#finalResult").value = calculate;

@@ -8,18 +8,17 @@ body {
     text-align: center;
 }
 
-/* Lommeregneren får en kant */
+/* Lommeregnerens udseende */
 .calculator {
-    background-color: #7CC27B;
-    position: center;
+    background-color: #7CC27B; /*lysegrøn*/
     margin: auto;
     width: 30%;
     padding: 20px;
     border-radius: 0 95px;
-    box-shadow: 3px 5px #326531;
+    box-shadow: 3px 5px #326531; /*mørkegrøn*/
 }
 
-/* Afstanden mellem tal 1, tal 2, vælg imellem og beregn */
+/* Afstanden mellem inputLeft, inputRight, vælg imellem og beregn */
 div {
     margin-top: 5px;
 }
