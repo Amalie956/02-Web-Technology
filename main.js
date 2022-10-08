@@ -2,12 +2,12 @@ const button = document.querySelector("#submit");
 button.addEventListener('click', function (event) {
         event.preventDefault();
 
-        let inputLeft = parseFloat(document.querySelector("#box1").value);
-        let inputRight = parseFloat(document.querySelector("#box2").value);
+        let inputLeft = parseFloat(document.querySelector("#inputLeft").value);
+        let inputRight = parseFloat(document.querySelector("#inputRight").value);
         let operator = document.querySelector("#operator").value;
 
         if (inputLeft.toString() === "NaN") {
-            let input1Value = document.querySelector("#box1").value;
+            let input1Value = document.querySelector("#inputLeft").value;
             if (input1Value.trim() === "") {
                 alert("Ups, indsæt et tal. Prøv igen.");
             } else {
@@ -17,7 +17,7 @@ button.addEventListener('click', function (event) {
         }
 
         if (inputRight.toString() === "NaN") {
-            let input2Value = document.querySelector("#box2").value;
+            let input2Value = document.querySelector("#inputRight").value;
             if (input2Value.trim() === "") {
                 alert("Ups, indsæt et tal. Prøv igen");
             } else {
